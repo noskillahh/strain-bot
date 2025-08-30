@@ -1,0 +1,19 @@
+# Core Discord and API dependencies
+discord.py==2.5.2
+gspread==6.1.2
+google-auth==2.35.0
+python-dotenv==1.0.1
+
+# Security enhancements
+cryptography==42.0.8
+
+# Monitoring and web server
+aiohttp==3.9.5
+
+# Async support
+asyncio==3.4.3
+
+# Development and testing (optional)
+pytest==8.2.2
+pytest-asyncio==0.23.7
+black==24.4.2

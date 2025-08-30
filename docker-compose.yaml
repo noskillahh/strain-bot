@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  strain-bot:
+    build: .
+    container_name: discord-strain-bot
+    restart: unless-stopped
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - SPREADSHEET_ID=${SPREADSHEET_ID}
+      - MODERATOR_ROLE_ID=${MODERATOR_ROLE_ID}
+      - GUILD_ID=${GUILD_ID}
+    volumes:
+      - ./credentials.json:/app/credentials.json:ro
+      - ./logs:/app/logs
+    mem_limit: 256m
+    cpus: 0.5
+
+volumes:
+  logs:
